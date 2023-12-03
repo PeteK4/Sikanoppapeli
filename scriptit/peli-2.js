@@ -74,8 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
           tarkistaPisteet(noppaLukuA, noppaLukuB)
           heitaNappi.style.display = "none"; // buttonien näkyvyydet pelin tilanteissa
           passaaNappi.style.display = "none";
-          tupla1Nappi.style.display = "block";
-
+        
         // Kaksi ykköstä antaa 25 pistettä
         } else if (noppaLukuA == 1 || noppaLukuB == 1) {
           summa = 0;
@@ -90,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
         triplaTuplat += 1
           tuplaNappi.style.display = "block";
           heitaNappi.style.display = "none";
-          passaaNappi.style.display = "none";
           if (triplaTuplat == 3) {
               summa = 0;
               paivitaPisteet();
@@ -130,6 +128,8 @@ document.addEventListener("DOMContentLoaded", function () {
         tulostaLista();
         pelaajaNro = (pelaajaNro + 1) % Object.keys(pelaajat).length;
         paivitaPelaajaNimi();
+        tuplaNappi.style.display = "none";
+        tupla1Nappi.style.display = "none";
         tupla3Nappi.style.display = "none";
       }
   
