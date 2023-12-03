@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./kuvat/fico.ico">
+    <link rel="stylesheet" type="text/css" href="./stl/stl-menu.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Roboto&display=swap">
+    <title>Sikanoppapeli</title>
+</head>
+
+<body>
+    <div class="pelialue">
+        <div>
+            <img class="logo" src="./kuvat/logo.webp" alt="">
+            <img class="noppa" src="./kuvat/noppa1.webp" draggable="false">
+            <img class="noppa" src="./kuvat/noppa2.webp" draggable="false">
+            <img class="noppa" src="./kuvat/noppa3.webp" draggable="false">
+            <img class="noppa" src="./kuvat/noppa4.webp" draggable="false">
+            <img class="noppa" src="./kuvat/noppa5.webp" draggable="false">
+            <img class="noppa" src="./kuvat/noppa6.webp" draggable="false">
+        </div>
+
+        <div class="maaraKentta">
+            <form id="maaraKysely">
+                <label for="pelaajienMaara">Montako pelaajaa (2-9) ?</label>
+                <input type="number" id="pelaajienMaara" min="2" max="9" value="2">
+                <button type="submit">KUITTAA</button>
+            </form>
+        </div>
+
+        <div id="pelaajienNimetKentta" style="display: none;">
+            <span id="nimiOtsikko">Anna pelaajien nimet:</span>
+            <form id="nimetKysely">
+                <label id="pelaajaNro">Pelaaja 1:</label>
+                <input type="text" id="pelaajaNimi" autocomplete="off" autofocus maxlength="10">
+                <button type="submit">KUITTAA</button>
+            </form>
+        </div>
+
+        <button id="ohjeNappi">OHJE</button>
+
+        <div id="montakoNoppaa" style="display: none;">Pelataanko
+                <a href="peli1.html">yhdellä</a> vai
+                <a href="peli2.html">kahdella</a> nopalla?</div>
+
+        <div id="ohjeKentta" style="display: none; text-align: center;">
+            <h2>PELIN KULKU</h2>
+            <p style="text-align: left;">
+                <b>Sikanoppaa yhdellä nopalla:</b><br><br>
+                &nbsp; - Pelaaja heittää noppaa niin kauan kunnes päättää PASSATA tai heittää YKKÖSEN.<br>
+                &nbsp; - Jos pelaaja PASSAA, pisteet lisätään pelaajan yhteispisteisiin ja vuoro siirtyy seuraavalle pelaajalle.<br>
+                &nbsp; - Heittäessään YKKÖSEN, pelaaja menettää sen kierroksen pisteet ja vuoron saa seuraava pelaaja.<br>
+                &nbsp; - Pelin voittajaa hän, joka saavuttaa ensimmäisenä vähintään 100 pistettä.<br><br>
+                <b>Sikanoppaa kahdella nopalla:</b><br><br>
+                &nbsp; - Samat säännöt kuin pelatessa yhdellä nopalla.<br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;* LISÄKSI:<br><br>
+                &nbsp; - Jos pelaaja heittää kaksi YKKÖSTÄ, hän saa 25 pistettä.<br>
+                &nbsp; - Pelaajan heittäessä tuplat, hän saa noppien yhteenlasketun summan kaksinkertaisena.<br>
+                &nbsp; - Heittäessään kolmet tuplat peräkkäin, pelaaja menettää sen kierroksen pisteet ja vuoro siirtyy seuraavalle pelaajalle.<br>
+                &nbsp; - Pelin voittajaa hän, joka saavuttaa ensimmäisenä vähintään 200 pistettä.<br>
+            </p>
+            <button id="poistuNappi">POISTU</button>
+        </div>
+    </div>
+
+    <script src="./scriptit/menu.js"></script>
+    <script src="./scriptit/nopparuletti.js"></script>
+    <script src="./scriptit/index.js"></script>
+</body>
+
+</html>

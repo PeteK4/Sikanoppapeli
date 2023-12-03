@@ -1,0 +1,115 @@
+body {
+    margin: auto;
+    text-align: center;
+    font-family: Agbalumo;
+    letter-spacing: 2px;
+    color: white;
+    background-color: rgb(172, 158, 255);
+    user-select: none;
+}
+
+.pelialue {
+    position: relative;
+    display: flex;
+    max-width: 2560px;
+    width: 90%;
+    height: 85vh;
+    margin: 65px auto;
+    background-color: #4338ac;
+}
+
+.peli {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+.logo {
+    display: block;
+    width: 50%;
+    max-width: 100%;
+    margin: 3% auto;
+    text-align: center;
+    pointer-events: none;
+}
+
+#noppa {
+    width: 150%;
+    margin: 10px 0px;
+}
+
+button#heita {
+    width: 100px;
+}
+
+button, button#uusiKierros{
+    color: #e7e7e7;
+    font-weight: bold;
+    background-color: #1b6fdd;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 0px 45px;
+    box-shadow: 0px 3px 5px rgb(27, 28, 71);
+    border: none;
+    transition-duration: .1s;
+    cursor:pointer;
+}
+
+button:hover, button#uusiKierros:hover {
+    color: #fff;
+    background-color: #297ce9;
+}
+
+button#vuoro, button#uusiPeli{
+    color: #e7e7e7;
+    font-weight: bold;
+    background-color: #dd581b;
+    border-radius: 25px;
+    padding: 10px 20px;
+    box-shadow: 0px 3px 5px rgb(27, 28, 71);
+    border: none;
+    transition-duration: .1s;
+    cursor:pointer;
+}
+
+button#vuoro:hover, button#uusiPeli:hover {
+    color: #fff;
+    background-color: #e46f38;
+}
+
+.noppa-peli {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    text-align: center;
+}
+
+#pelaajaNimi {
+    margin-top: 10px;
+    width: 200px;
+    height: 45px;
+    font-size: 3rem;
+    font-family: Agbalumo;
+}
+
+#kierrosPisteet {
+    margin-top: 30px;
+    font-size: 1.6rem;    
+}
+
+.tulokset {
+    width: 30%;
+    padding: 40px 100px;
+    background-color: #6258c0;
+    font-size: 2.5rem;
+    text-align: left;
+}
+
+#tuloslista {
+    padding: 0px 20px;
+    text-align: left;
+    line-height: 0;
+    font-size: 2rem;
+}

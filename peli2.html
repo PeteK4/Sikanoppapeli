@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./kuvat/fico.ico">>
+    <link rel="stylesheet" type="text/css" href="./stl/stl-peli-2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Roboto&display=swap">
+    <title>Sikanoppapeli</title>
+</head>
+
+<body>
+    <div class="pelialue">
+        <div class="peli">
+            <div>
+                <img class="logo" src="./kuvat/logo.webp" alt="">
+            </div>
+            <div id="peliRuutu">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div id="pelaajaNimi"></div>
+                    <div id="kierrosPisteet"></div>
+                    <div class="noppa-peli">
+                        <img id="noppaA" alt="" draggable="false">
+                        <img id="noppaB" alt="" draggable="false">
+                    </div>
+                </div>
+            </div>
+                <div id="napit" style="display: flex;">
+                    <button id="heita">HEITÄ</button>
+                    <button style="display: none;" id="passaa">PASSAA</button>
+                    <button style="display: none;" id="vuoro">HEITIT YKKÖSEN, VUORO VAIHTUU</button>
+                    <button style="display: none;" id="tupla">HEITIT TUPLAT, SAAT TUPLAPISTEET!</button>
+                    <button style="display: none;" id="tupla1">HEITIT TUPLA YKKÖSET, SAAT 25 PISTETTÄ!</button>
+                    <button style="display: none;" id="tupla3">HEITIT KOLME TUPLAA PERÄKKÄIN, VUORO VAIHTUU</button>
+                </div>
+                
+                <div style="display: none;" id="noppaAnim">
+                    <div id="isoNoppaA"></div>
+                    <div id="isoNoppaB"></div>
+                </div>
+                
+            <div style="display: none; margin-top: -50px;" id="lopputxt">
+                <h2>VOITTO HEITOT!</h2>
+            </div>
+        </div>
+
+        <div class="tulokset">YHTEISPISTEET:
+            <div id="tuloslista"></div>
+            <div style="display: none; margin-top:30px; font-size: 1.8rem;" id="voittaja">VOITTAJA ON:
+                <div style="margin-bottom: 20px; font-size: 3.2rem;" id="voittajanNimi"></div>
+                <button id="uusiKierros">UUSI KIERROS SAMALLA PORUKALLA</button>
+                <button style ="margin-top: 20px; margin-left: 60px;" id="uusiPeli">UUSI PELI UUDELLA PORUKALLA</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="./scriptit/peli-2.js"></script>
+    
+</body>
+
+</html>
