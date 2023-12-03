@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
           summa = 0;
           paivitaPisteet();
           vuoroNappi.style.display = "block";
-          passaaNappi.style.display = "block";
+          passaaNappi.style.display = "none";
           heitaNappi.style.display = "none";
 
       // Kaksi samaa noppalukua antaa tuplapisteet, esim. (3 + 3) * 2 = 12
