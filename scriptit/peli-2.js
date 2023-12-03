@@ -62,26 +62,27 @@ document.addEventListener("DOMContentLoaded", function () {
       // Arvotaan noppien silmäluvut, asetetaan noppien kuvat näytölle
       // Tarkistetaan tulokset, asetetaan aika .gif animaatiolle
       setTimeout(function () {
-        const noppaLukuA= Math.floor(Math.random() * noppaKuvat.length) + 1;
-        const noppaLukuB = Math.floor(Math.random() * noppaKuvat.length) + 1; 
+        const noppaLukuA= Math.floor(Math.random() * 6) + 1;
+        const noppaLukuB = Math.floor(Math.random() * 6) + 1; 
         noppaA.src = `./kuvat/${noppaKuvat[noppaLukuA - 1]}.webp`;
         noppaB.src = `./kuvat/${noppaKuvat[noppaLukuB - 1]}.webp`;
 
-      // Jos jompi kumpi noppa antaa ykkösen, nollaataan kierrospisteet ja vuoro siirtyy seuraavalle pelaajalle
+        // Kaksi ykköstä antaa 25 pistettä
         if (noppaLukuA == 1 && noppaLukuB == 1){
           summa += 25;
           paivitaPisteet();
           tarkistaPisteet(noppaLukuA, noppaLukuB)
-          heitaNappi.style.display = "none"; // buttonien näkyvyydet pelin tilanteissa
-          passaaNappi.style.display = "none";
+          tupla1Nappi.style.display = "block"; // buttonien näkyvyydet pelin tilanteissa
+          passaaNappi.style.display = "block";
+          heitaNappi.style.display = "none";
         
-        // Kaksi ykköstä antaa 25 pistettä
+        // Jos jompi kumpi noppa antaa ykkösen, nollaataan kierrospisteet ja vuoro siirtyy seuraavalle pelaajalle
         } else if (noppaLukuA == 1 || noppaLukuB == 1) {
           summa = 0;
           paivitaPisteet();
-          heitaNappi.style.display = "none";
-          passaaNappi.style.display = "none";
           vuoroNappi.style.display = "block";
+          passaaNappi.style.display = "block";
+          heitaNappi.style.display = "none";
 
       // Kaksi samaa noppalukua antaa tuplapisteet, esim. (3 + 3) * 2 = 12
       // Jos heitetään tuplat kolmesti peräkkäin, nollataan pisteet ja vuoro vaihtuu

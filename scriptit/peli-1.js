@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Arvotaan noppan silmäluku, asetetaan nopan kuva näytölle
       // Tarkistetaan tulokset, asetetaan aika .gif animaatiolle
       setTimeout(function () {
-        const noppaLuku = Math.floor(Math.random() * noppaKuvat.length) + 1;
+        const noppaLuku = Math.floor(Math.random() * 6) + 1;
         noppa.src = `./kuvat/${noppaKuvat[noppaLuku - 1]}.webp`;
   
         // Jos noppa antaa ykkösen, nollaataan kierrospisteet ja vuoro siirtyy seuraavalle pelaajalle
