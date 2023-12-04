@@ -62,8 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
       // Arvotaan noppien silmäluvut, asetetaan noppien kuvat näytölle
       // Tarkistetaan tulokset, asetetaan aika .gif animaatiolle
       setTimeout(function () {
-        const noppaLukuA= Math.floor(Math.random() * 6) + 1;
-        const noppaLukuB = Math.floor(Math.random() * 6) + 1; 
+        const noppaLukuA= Math.floor(Math.random() * 1) + 2;
+        const noppaLukuB = Math.floor(Math.random() * 1) + 2; 
         noppaA.src = `./kuvat/${noppaKuvat[noppaLukuA - 1]}.webp`;
         noppaB.src = `./kuvat/${noppaKuvat[noppaLukuB - 1]}.webp`;
 
@@ -92,11 +92,15 @@ document.addEventListener("DOMContentLoaded", function () {
           heitaNappi.style.display = "none";
           if (triplaTuplat == 3) {
               summa = 0;
+              triplaTuplat = 0;
               paivitaPisteet();
               tarkistaPisteet(noppaLukuA, noppaLukuB)
               heitaNappi.style.display = "none";
               passaaNappi.style.display = "none";
+              tuplaNappi.style.display = "none";
+              tupla1Nappi.style.display = "none";
               tupla3Nappi.style.display = "block";
+              return
           }
           summa += (noppaLukuA+ noppaLukuB) * 2;
           paivitaPisteet();
