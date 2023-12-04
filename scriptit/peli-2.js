@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Jos jompi kumpi noppa antaa ykkösen, nollaataan kierrospisteet ja vuoro siirtyy seuraavalle pelaajalle
         } else if (noppaLukuA == 1 || noppaLukuB == 1) {
           summa = 0;
+          triplaTuplat = 0;
           paivitaPisteet();
           vuoroNappi.style.display = "block";
           passaaNappi.style.display = "none";
