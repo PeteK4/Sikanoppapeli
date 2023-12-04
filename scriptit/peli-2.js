@@ -173,8 +173,8 @@ document.addEventListener("DOMContentLoaded", function () {
         voittajaKentta.style.display = "block";
         napitKaikki.style.display = "none";
         peliRuutu.style.display = "none";
-        isoNoppaKuvaA.innerHTML = `<img src="./kuvat/${noppaKuvat[noppaLukuA - 1]}.webp" alt="" style="width: 100%">`;
-        isoNoppaKuvaB.innerHTML = `<img src="./kuvat/${noppaKuvat[noppaLukuB - 1]}.webp" alt="" style="width: 100%">`;
+        isoNoppaKuvaA.innerHTML = `<img src="./kuvat/${noppaKuvat[noppaLukuA - 1]}.webp" alt="" style="width: 100%" draggable="false">`;
+        isoNoppaKuvaB.innerHTML = `<img src="./kuvat/${noppaKuvat[noppaLukuB - 1]}.webp" alt="" style="width: 100%" draggable="false">`;
     
         setTimeout(function () {
             lopputxt.style.display ="none";
@@ -193,15 +193,15 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       
       function isoNoppaAnimaatio() {
-        isoNoppaKuvaA.innerHTML = `<img src="./kuvat/noppa.gif" alt="" style="width: 100%">`;
-        isoNoppaKuvaB.innerHTML = `<img src="./kuvat/noppa.gif" alt="" style="width: 100%">`;
+        isoNoppaKuvaA.innerHTML = `<img src="./kuvat/noppa.gif" alt="" style="width: 100%" draggable="false">`;
+        isoNoppaKuvaB.innerHTML = `<img src="./kuvat/noppa.gif" alt="" style="width: 100%" draggable="false">`;
         setInterval(function () {
-          isoNoppaKuvaA.innerHTML = `<img src="./kuvat/${noppaKuvat[Math.floor(Math.random() * noppaKuvat.length)]}.webp" alt="" style="width: 100%">`;
-          isoNoppaKuvaB.innerHTML = `<img src="./kuvat/${noppaKuvat[Math.floor(Math.random() * noppaKuvat.length)]}.webp" alt="" style="width: 100%">`;
+          isoNoppaKuvaA.innerHTML = `<img src="./kuvat/${noppaKuvat[Math.floor(Math.random() * noppaKuvat.length)]}.webp" alt="" style="width: 100%" draggable="false">`;
+          isoNoppaKuvaB.innerHTML = `<img src="./kuvat/${noppaKuvat[Math.floor(Math.random() * noppaKuvat.length)]}.webp" alt="" style="width: 100%" draggable="false">`;
       
           setTimeout(function () {
-            isoNoppaKuvaA.innerHTML = `<img src="./kuvat/noppa.gif" alt="" style="width: 100%">`;
-            isoNoppaKuvaB.innerHTML = `<img src="./kuvat/noppa.gif" alt="" style="width: 100%">`;
+            isoNoppaKuvaA.innerHTML = `<img src="./kuvat/noppa.gif" alt="" style="width: 100%" draggable="false">`;
+            isoNoppaKuvaB.innerHTML = `<img src="./kuvat/noppa.gif" alt="" style="width: 100%" draggable="false">`;
           }, 1000);
         }, 2000);
       }

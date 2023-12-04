@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
         napitKaikki.style.display = "none";
         peliRuutu.style.display = "none";
         isoNoppaKuva.style.display = "block";
-        isoNoppaKuva.innerHTML = `<img src="./kuvat/${noppaKuvat[noppaLuku - 1]}.webp" alt="" style="width: 75%">`;
+        isoNoppaKuva.innerHTML = `<img src="./kuvat/${noppaKuvat[noppaLuku - 1]}.webp" alt="" style="width: 75%" draggable="false">`;
     
         setTimeout(function () {
             lopputxt.style.display ="none";
@@ -132,12 +132,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       
       function isoNoppaAnimaatio() {
-        document.getElementById("isoNoppa").innerHTML = `<img src="./kuvat/noppa.gif" alt="" style="width: 75%">`;
+        document.getElementById("isoNoppa").innerHTML = `<img src="./kuvat/noppa.gif" alt="" style="width: 75%" draggable="false">`;
         setInterval(function () {
-          document.getElementById("isoNoppa").innerHTML = `<img src="./kuvat/${noppaKuvat[Math.floor(Math.random() * noppaKuvat.length)]}.webp" alt="" style="width: 75%">`;
+          document.getElementById("isoNoppa").innerHTML = `<img src="./kuvat/${noppaKuvat[Math.floor(Math.random() * noppaKuvat.length)]}.webp" alt="" style="width: 75%" draggable="false">`;
       
           setTimeout(function () {
-            document.getElementById("isoNoppa").innerHTML = `<img src="./kuvat/noppa.gif" alt="" style="width: 75%">`;
+            document.getElementById("isoNoppa").innerHTML = `<img src="./kuvat/noppa.gif" alt="" style="width: 75%" draggable="false">`;
           }, 1000);
         }, 2000);
       }
