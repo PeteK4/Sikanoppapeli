@@ -62,8 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
       // Arvotaan noppien silmäluvut, asetetaan noppien kuvat näytölle
       // Tarkistetaan tulokset, asetetaan aika .gif animaatiolle
       setTimeout(function () {
-        const noppaLukuA= Math.floor(Math.random() * 1) + 2;
-        const noppaLukuB = Math.floor(Math.random() * 1) + 2; 
+        const noppaLukuA= Math.floor(Math.random() * 6) + 1;
+        const noppaLukuB = Math.floor(Math.random() * 6) + 1; 
         noppaA.src = `./kuvat/${noppaKuvat[noppaLukuA - 1]}.webp`;
         noppaB.src = `./kuvat/${noppaKuvat[noppaLukuB - 1]}.webp`;
 
