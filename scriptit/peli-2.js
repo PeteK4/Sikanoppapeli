@@ -105,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
           summa += (noppaLukuA+ noppaLukuB) * 2;
           paivitaPisteet();
+          tarkistaPisteet(noppaLukuA, noppaLukuB)
 
         // Lasketaan yhteen noppien summa, nollataan triplatuplalaskuri
         } else {
