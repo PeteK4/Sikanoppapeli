@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Pääohjelma
     function heitaNoppa() {
       // pyöräytetään noppaa .gif animaatiolla
-      noppa.src = "./kuvat/noppa.gif";
+      noppa.src = "./kuvat/noppa1.gif";
       
       // passaa buttonin näkyvyys
       passaaNappi.style.display = "block";
@@ -132,12 +132,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       
       function isoNoppaAnimaatio() {
-        document.getElementById("isoNoppa").innerHTML = `<img src="./kuvat/noppa.gif" alt="" style="width: 75%" draggable="false">`;
+        document.getElementById("isoNoppa").innerHTML = `<img src="./kuvat/noppa1.gif" alt="" style="width: 75%" draggable="false">`;
         setInterval(function () {
           document.getElementById("isoNoppa").innerHTML = `<img src="./kuvat/${noppaKuvat[Math.floor(Math.random() * noppaKuvat.length)]}.webp" alt="" style="width: 75%" draggable="false">`;
       
           setTimeout(function () {
-            document.getElementById("isoNoppa").innerHTML = `<img src="./kuvat/noppa.gif" alt="" style="width: 75%" draggable="false">`;
+            document.getElementById("isoNoppa").innerHTML = `<img src="./kuvat/noppa1.gif" alt="" style="width: 75%" draggable="false">`;
           }, 1000);
         }, 2000);
       }
