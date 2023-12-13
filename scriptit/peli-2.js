@@ -49,8 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Pääohjelma
     function heitaNoppa() {
       // pyöräytetään noppaa .gif animaatiolla
-      noppaA.src = "./kuvat/noppa.gif";
-      noppaB.src = "./kuvat/noppa.gif";
+      noppaA.src = "./kuvat/noppa1.gif";
+      noppaB.src = "./kuvat/noppa2.gif";
 
       // eri buttonien näkyvyys näytöllä
       heitaNappi.style.display = "block";
@@ -193,15 +193,15 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       
       function isoNoppaAnimaatio() {
-        isoNoppaKuvaA.innerHTML = `<img src="./kuvat/noppa.gif" alt="" style="width: 100%" draggable="false">`;
-        isoNoppaKuvaB.innerHTML = `<img src="./kuvat/noppa.gif" alt="" style="width: 100%" draggable="false">`;
+        isoNoppaKuvaA.innerHTML = `<img src="./kuvat/noppa1.gif" alt="" style="width: 100%" draggable="false">`;
+        isoNoppaKuvaB.innerHTML = `<img src="./kuvat/noppa2.gif" alt="" style="width: 100%" draggable="false">`;
         setInterval(function () {
           isoNoppaKuvaA.innerHTML = `<img src="./kuvat/${noppaKuvat[Math.floor(Math.random() * noppaKuvat.length)]}.webp" alt="" style="width: 100%" draggable="false">`;
           isoNoppaKuvaB.innerHTML = `<img src="./kuvat/${noppaKuvat[Math.floor(Math.random() * noppaKuvat.length)]}.webp" alt="" style="width: 100%" draggable="false">`;
       
           setTimeout(function () {
-            isoNoppaKuvaA.innerHTML = `<img src="./kuvat/noppa.gif" alt="" style="width: 100%" draggable="false">`;
-            isoNoppaKuvaB.innerHTML = `<img src="./kuvat/noppa.gif" alt="" style="width: 100%" draggable="false">`;
+            isoNoppaKuvaA.innerHTML = `<img src="./kuvat/noppa1.gif" alt="" style="width: 100%" draggable="false">`;
+            isoNoppaKuvaB.innerHTML = `<img src="./kuvat/noppa2.gif" alt="" style="width: 100%" draggable="false">`;
           }, 1000);
         }, 2000);
       }
